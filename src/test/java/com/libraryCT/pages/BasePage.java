@@ -12,6 +12,13 @@ public abstract class BasePage {
     }
 
 
+    @FindBy(id = "navbarDropdown")
+    public WebElement usernameLink;
+
+    @FindBy(xpath = "//a[.='Log Out']")
+    public WebElement logoutButton;
+
+
     @FindBy(xpath = "//span[.='Dashboard']")
     public WebElement dashboardLink;
 
@@ -20,5 +27,6 @@ public abstract class BasePage {
 
     @FindBy(xpath = "//span[.='Books']")
     public WebElement booksLink;
+
 
 }

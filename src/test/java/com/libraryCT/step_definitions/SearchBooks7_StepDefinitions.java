@@ -1,5 +1,6 @@
 package com.libraryCT.step_definitions;
 
+import com.libraryCT.pages.BooksPage;
 import com.libraryCT.pages.LoginPage;
 import com.libraryCT.utilities.BrowserUtils;
 import com.libraryCT.utilities.ConfigurationReader;
@@ -7,12 +8,20 @@ import com.libraryCT.utilities.Driver;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import org.junit.Assert;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
+
+import java.util.List;
 
 public class SearchBooks7_StepDefinitions {
 
     LoginPage loginPage = new LoginPage();
+    BooksPage booksPage = new BooksPage();
+
     WebDriverWait wait = new WebDriverWait(Driver.getDriver(), 10);
+    Select select;
 
     @Given("User is on login page")
     public void user_is_on_login_page() {
@@ -27,27 +36,32 @@ public class SearchBooks7_StepDefinitions {
        loginPage.login_As_A_Student();   // login as a Student in my case
 
        // loginPage.login_As_A_Librarian(); // if your story related Librarian then use this one
-        BrowserUtils.wait(7);
+
     }
 
     @When("Student click on different categories")
     public void student_click_on_different_categories() {
-
+        select = new Select(booksPage.bookCategories);
+        WebElement firstSelectedOption = select.getFirstSelectedOption();
     }
 
     @Then("It should display all categories")
     public void it_should_display_all_categories() {
-
+        List<WebElement> elements = select.getOptions();
     }
 
     @Then("Student able to select any categories and search Books")
-    public void student_able_to_select_any_categories_and_search_books(io.cucumber.datatable.DataTable dataTable) {
-        // Write code here that turns the phrase above into concrete actions
-        // For automatic transformation, change DataTable to one of
-        // E, List<E>, List<List<E>>, List<Map<K,V>>, Map<K,V> or
-        // Map<K, List<V>>. E,K,V must be a String, Integer, Float,
-        // Double, Byte, Short, Long, BigInteger or BigDecimal.
-        //
-        // For other transformations you can register a DataTableType.
+    public void student_able_to_select_any_categories_and_search_books(List<String> listOfCategories) {
+
+
+        for (int i=1; i < listOfCategories.size(); i++) {
+
+            BrowserUtils.waitForVisibility(booksPage.bookCategories,10);
+            select.selectByIndex(i);
+            if (i < 3) BrowserUtils.wait(4);
+            else BrowserUtils.wait(1);
+           // System.out.println(listOfCategories.get(i)+"*********" + booksPage.getBook.getText());
+            Assert.assertTrue(listOfCategories.get(i).equals(booksPage.getBook.getText() ));
+        }
     }
 }

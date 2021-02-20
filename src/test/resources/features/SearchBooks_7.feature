@@ -1,9 +1,11 @@
+
+@wip
 Feature: Students able to search books
 
   Agile Story:  7. As a students, I should be able to search books with different categories.
   (student may create a scenario with pipeline to list all the categories)
 
-  @wip
+
   Scenario: Students able to search books in different Categories
     Given User is on login page
     And with Student login credential login successfully
@@ -12,6 +14,7 @@ Feature: Students able to search books
     Then Student able to select any categories and search Books
       | All                     |
       | Action and Adventure    |
+      | Anthology               |
       | Classic                 |
       | Comic and Graphic Novel |
       | Crime and Detective     |
