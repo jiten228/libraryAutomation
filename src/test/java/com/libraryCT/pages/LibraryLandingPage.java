@@ -5,19 +5,10 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class LoginPage {
+public class LibraryLandingPage {
 
-    public LoginPage(){
+    public LibraryLandingPage(){
         PageFactory.initElements(Driver.getDriver(), this);
     }
-
-    @FindBy(id = "inputEmail")
-    public WebElement username;
-
-    @FindBy(id = "inputPassword")
-    public WebElement password;
-
-    @FindBy(xpath = "//button[.='Sign in']")
-    public WebElement submitButton;
 
 }
