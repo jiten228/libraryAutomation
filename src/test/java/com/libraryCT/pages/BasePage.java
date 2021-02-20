@@ -11,10 +11,22 @@ public abstract class BasePage {
         PageFactory.initElements(Driver.getDriver(), this);
     }
 
+
     @FindBy(id = "navbarDropdown")
     public WebElement usernameLink;
 
     @FindBy(xpath = "//a[.='Log Out']")
     public WebElement logoutButton;
+
+
+    @FindBy(xpath = "//span[.='Dashboard']")
+    public WebElement dashboardLink;
+
+    @FindBy(xpath = "//span[.='Users']")
+    public WebElement usersLink;
+
+    @FindBy(xpath = "//span[.='Books']")
+    public WebElement booksLink;
+
 
 }
