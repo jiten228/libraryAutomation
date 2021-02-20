@@ -1,4 +1,4 @@
 package com.libraryCT.pages;
 
-public class BooksPage {
+public class BooksPage extends BasePage{
 }

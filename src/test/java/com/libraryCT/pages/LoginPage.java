@@ -1,5 +1,6 @@
 package com.libraryCT.pages;
 
+import com.libraryCT.utilities.ConfigurationReader;
 import com.libraryCT.utilities.Driver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -19,5 +20,19 @@ public class LoginPage {
 
     @FindBy(xpath = "//button[.='Sign in']")
     public WebElement submitButton;
+
+    //login as a Librarian  where we can pass data from configuration.properties
+    public void login_As_A_Librarian(){
+        username.sendKeys(ConfigurationReader.getProperty("librarianUsername"));
+        password.sendKeys(ConfigurationReader.getProperty("librarianPassword"));
+        submitButton.click();
+    }
+
+    //login as a Student  where we can pass data from configuration.properties
+    public void login_As_A_Student(){
+        username.sendKeys(ConfigurationReader.getProperty("librarianUsername"));
+        password.sendKeys(ConfigurationReader.getProperty("librarianPassword"));
+        submitButton.click();
+    }
 
 }
