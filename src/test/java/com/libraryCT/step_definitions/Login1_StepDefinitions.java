@@ -39,14 +39,4 @@ public class Login1_StepDefinitions {
         Assert.assertTrue(actualUrl.contains(expected));
     }
 
-    @When("User click on logout button")
-    public void user_click_on_logout_button() {
-        loginPage.usernameLink.click();
-        loginPage.logoutButton.click();
-    }
-
-    @Then("User should be on login home page")
-    public void user_should_be_on_login_home_page() {
-        Assert.assertTrue(loginPage.username.isDisplayed());
-    }
 }
