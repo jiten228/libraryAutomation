@@ -1,11 +1,20 @@
 package com.libraryCT.step_definitions;
 
+import com.libraryCT.pages.BorrowingBooksPage;
+import com.libraryCT.pages.UsersPage;
+import com.libraryCT.utilities.BrowserUtils;
 import com.libraryCT.utilities.Driver;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import org.junit.Assert;
+import org.openqa.selenium.WebElement;
+
+import java.util.List;
 
 public class BorrowingBooks8_StepDefinitions {
+
+   BorrowingBooksPage borrowingBooksPage= new BorrowingBooksPage();
 
     @Given("the user on the homepage")
     public void the_user_on_the_homepage() {
@@ -20,7 +29,17 @@ public class BorrowingBooks8_StepDefinitions {
 
 
     @Then("the user should see the following column names:")
-    public void the_user_should_see_the_following_column_names(io.cucumber.datatable.DataTable dataTable) {
+    public void the_user_should_see_the_following_column_names(List<String> expectedColumnNames) {
+
+        //System.out.println("expectedColumnNames =" +expectedColumnNames );
+        //System.out.println("expectedColumnNames.size =" +expectedColumnNames.size() );
+
+        BrowserUtils.wait(2);
+        List<String> actualColumnNames = BrowserUtils.getElementsText(borrowingBooksPage.tableHeaders);
+
+        Assert.assertEquals(expectedColumnNames, actualColumnNames);
+
+
 
     }
 }
