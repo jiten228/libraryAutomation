@@ -10,12 +10,7 @@ import org.junit.runner.RunWith;
         glue = "com/libraryCT/step_definitions",
 
         tags = "@wip",
-        dryRun = true
-
-        tags = "@groupCategory",
         dryRun = false
-
-
 )
 
 public class CukesRunner {
