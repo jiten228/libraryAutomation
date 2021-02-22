@@ -1,6 +1,6 @@
 Feature:
 
-  @wip
+  @1
   Scenario: borrowing books tabe column names
     Given the user on the homepage
     When the user click Borrowing Books module
