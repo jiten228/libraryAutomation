@@ -40,8 +40,7 @@ public class UsersPage extends BasePage{
     @FindBy(xpath = "//button[@type='submit']")
     public WebElement saveChangesButton;
 
-    @FindBy(xpath = "//th")
-    public List<WebElement> managementColumns;
+
 
 
 
