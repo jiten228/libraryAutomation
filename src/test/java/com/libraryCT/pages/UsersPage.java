@@ -3,21 +3,20 @@ package com.libraryCT.pages;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
+import java.util.List;
+
 public class UsersPage extends BasePage{
 
-    @FindBy(xpath = "//*[@id=\"menu_item\"]/li[2]/a")
-    public WebElement usersButton;
-
-    @FindBy(xpath = "//*[@id=\"users\"]/div[1]/div[1]/span/a")
+    @FindBy(className = "btn btn-lg btn-outline btn-primary btn-sm")
     public WebElement addUserButton;
 
-    @FindBy(xpath = "//input[@name='full_name']")
+    @FindBy(xpath = "//input[@class='form-control'][1]")
     public WebElement fullName;
 
-    @FindBy(xpath = "//input[@type='password']")
+    @FindBy(xpath = "//input[@class='form-control'][2]")
     public WebElement password;
 
-    @FindBy(xpath = "//input[@name='email']")
+    @FindBy(xpath = "//input[@class='form-control'][3]")
     public WebElement email;
 
     @FindBy(id = "user_group_id")
@@ -29,7 +28,7 @@ public class UsersPage extends BasePage{
     @FindBy(id = "address")
     public WebElement address;
 
-    @FindBy(xpath = "//div[@id='start_date']")
+    @FindBy(xpath = "//input[@class='form-control'][4]")
     public WebElement startDate;
 
     @FindBy(xpath = "//input[@class='form-control'][5]")
@@ -41,14 +40,8 @@ public class UsersPage extends BasePage{
     @FindBy(xpath = "//button[@type='submit']")
     public WebElement saveChangesButton;
 
-    @FindBy(xpath = "//*[@id=\"tbl_users\"]/tbody/tr[1]/td[1]/a")
-    public WebElement editUserButton;
-
-    @FindBy(xpath = "//*[@id=\"ajax\"]/div/div/div/script/text()")
-    public WebElement userUpdatedMessage;
-
-
-
+    @FindBy(xpath = "//th")
+    public List<WebElement> managementColumns;
 
 
 
