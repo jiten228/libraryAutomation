@@ -36,7 +36,7 @@ public class ManagementTable11_StepDefinitions {
     }
 
 
-    @Then("the user should see the following column names:")
+    @Then("the user should see the following column names :")
     public void the_user_should_see_the_following_column_names(List<String> expectedColumnNames) {
 
         List<String> actualColumnNames = new ArrayList<>();

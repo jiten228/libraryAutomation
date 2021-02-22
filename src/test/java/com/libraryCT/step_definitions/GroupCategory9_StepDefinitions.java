@@ -4,6 +4,7 @@ import com.libraryCT.pages.UserGroupPage;
 import com.libraryCT.utilities.BrowserUtils;
 import com.libraryCT.utilities.ConfigurationReader;
 import com.libraryCT.utilities.Driver;
+import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -28,13 +29,13 @@ public class GroupCategory9_StepDefinitions {
 
 
     }
-    @When("the user click users module")
+    @When("the user click users module.")
     public void the_user_click_users_module() {
     UserGroupPage.usersCategory.click();
     BrowserUtils.wait(10);
 
     }
-    @When("the user click User Group dropdown")
+    @And("the user click User Group dropdown")
     public void the_user_click_user_group_dropdown() {
         Select userGroups= new Select(UserGroupPage.userGroups);
         BrowserUtils.wait(10);
