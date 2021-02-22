@@ -37,7 +37,7 @@ public class AddUsers4_StepDefinitions {
     @When("user add users with all valid info")
     public void user_add_users_with_all_valid_info() {
 
-        userPage.usersButton.click();
+        //userPage.usersButton.click();
         userPage.addUserButton.click();
         userPage.fullName.click();
         userPage.fullName.clear();
@@ -74,8 +74,8 @@ public class AddUsers4_StepDefinitions {
 
     @When("user click edit user button")
     public void user_click_button() {
-        userPage.usersButton.click();
-        userPage.editUserButton.click();
+       // userPage.usersButton.click();
+       // userPage.editUserButton.click();
         BrowserUtils.wait(2);
         userPage.fullName.click();
         userPage.fullName.clear();
