@@ -3,6 +3,8 @@ package com.libraryCT.pages;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
+import java.util.List;
+
 public class UsersPage extends BasePage{
 
     @FindBy(className = "btn btn-lg btn-outline btn-primary btn-sm")
@@ -37,5 +39,12 @@ public class UsersPage extends BasePage{
 
     @FindBy(xpath = "//button[@type='submit']")
     public WebElement saveChangesButton;
+
+    @FindBy(xpath = "//th")
+    public List<WebElement> managementColumns;
+
+
+
+
 
 }
