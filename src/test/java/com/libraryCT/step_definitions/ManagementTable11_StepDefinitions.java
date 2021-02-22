@@ -40,7 +40,7 @@ public class ManagementTable11_StepDefinitions {
     public void the_user_should_see_the_following_column_names(List<String> expectedColumnNames) {
 
         List<String> actualColumnNames = new ArrayList<>();
-        /*
+
         for (WebElement each : usersPage.managementColumns){
             actualColumnNames.add(each.getText());
         }
@@ -48,7 +48,7 @@ public class ManagementTable11_StepDefinitions {
         System.out.println("actualColumnNames = " + actualColumnNames);
 
         Assert.assertTrue(expectedColumnNames.equals(actualColumnNames));
-        */
+
 
     }
 
