@@ -8,7 +8,9 @@ import org.junit.runner.RunWith;
 @CucumberOptions(
         features = "src/test/resources/features",
         glue = "com/libraryCT/step_definitions",
-        tags = "@editUser",
+
+        tags = "@groupcategory",
+
         dryRun = false
 )
 
