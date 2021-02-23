@@ -57,7 +57,11 @@ public class UsersPage extends BasePage{
     public List<WebElement> managementColumns;
 
 
+    @FindBy(id ="user_status")
+    public WebElement statusDropdown;
 
 
+    @FindBy(xpath = "//*[@id=\"tbl_users\"]/tbody/tr[1]/td[6]")
+    public WebElement findUserStatus;
 
 }
