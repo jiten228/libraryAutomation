@@ -8,7 +8,7 @@ import org.junit.Assert;
 
 import java.util.List;
 
-public class UsersTable6_StepDefinitions {
+public class BookManagementTable6_StepDefinitions {
 
     BooksPage booksPage = new BooksPage();
 
