@@ -5,7 +5,6 @@ Feature: Table Column Name
   Scenario: Table columns names
     Given I am on the login page
     And I login using "student107@library" and "zZr8iI13"
-    And I click on "Users" link
     Then table should have following column names:
       | Actions     |
       | ISBN        |
