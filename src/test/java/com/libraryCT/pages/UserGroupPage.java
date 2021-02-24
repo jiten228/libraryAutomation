@@ -14,7 +14,7 @@ public class UserGroupPage {
     public static WebElement usersCategory;
 
     @FindBy(id = "user_groups")
-    public static WebElement userGroups;
+    public static WebElement userGroupsDropdown;
 
 //    @FindBy()
 //    public WebElement allDropDown;
