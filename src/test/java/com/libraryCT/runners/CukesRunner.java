@@ -17,7 +17,7 @@ import org.junit.runner.RunWith;
  
        
  
-        tags = "@6",
+        tags = "",
  
         dryRun = false
 )
