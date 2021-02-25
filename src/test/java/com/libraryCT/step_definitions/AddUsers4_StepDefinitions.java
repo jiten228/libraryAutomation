@@ -63,7 +63,7 @@ public class AddUsers4_StepDefinitions {
         userPage.address.clear();
         userPage.address.sendKeys(faker.address().fullAddress());
         userPage.saveChangesButton.click();
-        BrowserUtils.wait(1);
+        BrowserUtils.wait(2);
 
     }
 
