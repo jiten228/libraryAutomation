@@ -2,10 +2,15 @@ package com.libraryCT.step_definitions;
 
 import com.libraryCT.pages.BooksPage;
 
+import com.libraryCT.utilities.BrowserUtils;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
+
+import java.util.ArrayList;
+import java.util.List;
 
 
 public class BookRecords5_StepDefinitions {
@@ -46,14 +51,38 @@ public class BookRecords5_StepDefinitions {
     public void showRecordsForOptions(String options) {
 
         selectRecords = new Select(booksPage.showRecordsDropdown);
-        selectRecords.selectByVisibleText(options);
+        BrowserUtils.wait(1);
 
-        booksPage.showRecordsDropdown.sendKeys(options);
+        switch (options) {
+            case "5":
+                selectRecords.selectByIndex(0);
+                break;
+            case "10":
+                selectRecords.selectByIndex(1);
+                break;
+            case "15":
+                selectRecords.selectByIndex(2);
+                break;
+            case "50":
+                selectRecords.selectByIndex(3);
+                break;
+            case "100":
+                selectRecords.selectByIndex(4);
+                break;
+            case "200":
+                selectRecords.selectByIndex(5);
+                break;
+            case "500":
+                selectRecords.selectByIndex(6);
 
-//       List<WebElement> webElements = selectRecords.getOptions();
-//        List<String> actual = BrowserUtils.getElementsText(webElements);
-//        Assert.assertEquals(actual, options);
 
+
+        }
+
+        BrowserUtils.wait(3);
+        List<WebElement> list = new ArrayList<>(booksPage.editBookButton);
+        int number = list.size();
+        Assert.assertEquals(number, Integer.parseInt(options));
 
     }
 }

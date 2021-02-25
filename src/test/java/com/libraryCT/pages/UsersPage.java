@@ -7,16 +7,19 @@ import java.util.List;
 
 public class UsersPage extends BasePage{
 
-    @FindBy(className = "btn btn-lg btn-outline btn-primary btn-sm")
+    @FindBy(xpath = "//*[@id=\"menu_item\"]/li[2]/a")
+    public WebElement usersButton;
+
+    @FindBy(xpath = "//*[@id=\"users\"]/div[1]/div[1]/span/a")
     public WebElement addUserButton;
 
     @FindBy(xpath = "//input[@class='form-control'][1]")
     public WebElement fullName;
 
-    @FindBy(xpath = "//input[@class='form-control'][2]")
+    @FindBy(xpath = "//input[@type='password']")
     public WebElement password;
 
-    @FindBy(xpath = "//input[@class='form-control'][3]")
+    @FindBy(xpath = "//input[@name='email']")
     public WebElement email;
 
     @FindBy(id = "user_group_id")
@@ -40,11 +43,25 @@ public class UsersPage extends BasePage{
     @FindBy(xpath = "//button[@type='submit']")
     public WebElement saveChangesButton;
 
+    @FindBy (xpath = "//*[@id=\"tbl_users\"]/tbody/tr[1]/td[1]")
+    public WebElement editUserButton;
+
+    @FindBy (xpath = "//*[text()='The user updated.']")
+    public WebElement userUpdatedMessage;
+
+    @FindBy (xpath = "//*[text()='The user has been created.']")
+    public WebElement userCreatedMessage;
+
+
     @FindBy(xpath = "//th")
     public List<WebElement> managementColumns;
 
 
+    @FindBy(id ="user_status")
+    public WebElement statusDropdown;
 
 
+    @FindBy(xpath = "//*[@id=\"tbl_users\"]/tbody/tr[1]/td[6]")
+    public WebElement findUserStatus;
 
 }

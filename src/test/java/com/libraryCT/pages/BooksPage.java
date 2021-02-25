@@ -34,6 +34,12 @@ public class BooksPage extends BasePage{
     @FindBy(name = "tbl_books_length")
     public WebElement showRecordsDropdown;
 
+    @FindBy(xpath = "//th")
+    public List<WebElement>  tableHeaders;
+
+    @FindBy(xpath = "//a[.=' Edit Book']")
+    public List<WebElement> editBookButton;
+
 
 
 
