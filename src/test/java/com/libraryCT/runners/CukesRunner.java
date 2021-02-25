@@ -9,7 +9,7 @@ import org.junit.runner.RunWith;
         features = "src/test/resources/features",
         glue = "com/libraryCT/step_definitions",
 
-        tags = "@wip",
+        tags = "@1",
         dryRun = false
 )
 
