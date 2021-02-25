@@ -1,4 +1,6 @@
-Feature:
+Feature: User should be able to see borrowing books table column names
+  As a user, I should able to see my borrowing books.
+
 
   @1
   Scenario: borrowing books tabe column names
