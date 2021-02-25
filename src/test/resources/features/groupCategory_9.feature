@@ -7,7 +7,7 @@ Scenario: verify user categories
   When the user click users module.
   And the user click User Group dropdown
   Then the user should see the following options
-    | All          |
+    |ALL           |
     |Librarian     |
     |Students      |
 
