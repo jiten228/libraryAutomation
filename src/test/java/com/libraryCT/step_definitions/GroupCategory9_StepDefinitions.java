@@ -9,6 +9,7 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
 
 import java.util.List;
@@ -32,21 +33,27 @@ public class GroupCategory9_StepDefinitions {
     @When("the user click users module.")
     public void the_user_click_users_module() {
     UserGroupPage.usersCategory.click();
-    BrowserUtils.wait(10);
+    BrowserUtils.wait(3);
 
     }
     @And("the user click User Group dropdown")
     public void the_user_click_user_group_dropdown() {
-        Select userGroups= new Select(UserGroupPage.userGroups);
-        BrowserUtils.wait(10);
+        Select userGroups= new Select(UserGroupPage.userGroupsDropdown);
+        userGroupPage.userGroupsDropdown.click();
+        //userGroups.getFirstSelectedOption().click();
+        BrowserUtils.wait(5);
     }
     @Then("the user should see the following options")
-    public void the_user_should_see_the_following_options(List<String> expectedList) {
-        BrowserUtils.wait(10);
-        Select userGroups= new Select(UserGroupPage.userGroups);
-        List<String> actualTexts = BrowserUtils.getElementsText(userGroups.getOptions());
+    public void the_user_should_see_the_following_options(List<String> allOptions) {
 
-        Assert.assertTrue(expectedList.equals(actualTexts));
+        userGroups=new Select(UserGroupPage.userGroupsDropdown);
+
+        List<WebElement> webElements= userGroups.getOptions();
+       List<String> actualTexts = BrowserUtils.getElementsText(webElements);
+        BrowserUtils.wait(2);
+
+        Assert.assertEquals(allOptions,actualTexts);
+
 
     }
 
