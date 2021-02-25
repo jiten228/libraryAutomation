@@ -1,3 +1,4 @@
+@wip
 Feature: As a user, I should be able to group category features
 
   @groupcategory
