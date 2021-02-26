@@ -1,4 +1,4 @@
-@wip
+@vita
 Feature: user should logout
   Background:
     Given User is on login page

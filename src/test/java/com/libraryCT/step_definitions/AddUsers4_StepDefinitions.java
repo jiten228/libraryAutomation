@@ -63,7 +63,7 @@ public class AddUsers4_StepDefinitions {
         userPage.address.clear();
         userPage.address.sendKeys(faker.address().fullAddress());
         userPage.saveChangesButton.click();
-        BrowserUtils.wait(1);
+        BrowserUtils.wait(2);
 
     }
 
@@ -71,6 +71,7 @@ public class AddUsers4_StepDefinitions {
     @When("user close the add user window with close button")
     public void user_close_the_add_user_window_with_button() {
         userPage.addUserButton.click();
+        BrowserUtils.wait(2);
         userPage.closeButton.click();
     }
 
