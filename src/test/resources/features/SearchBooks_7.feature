@@ -1,5 +1,4 @@
-
-@wip
+@vita
 Feature: Students able to search books
 
   Agile Story:  7. As a students, I should be able to search books with different categories.
