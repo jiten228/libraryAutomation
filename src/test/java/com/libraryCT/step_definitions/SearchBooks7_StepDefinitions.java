@@ -41,6 +41,7 @@ public class SearchBooks7_StepDefinitions {
 
     @When("Student click on different categories")
     public void student_click_on_different_categories() {
+        BrowserUtils.waitForVisibility(booksPage.bookCategories,10);
         select = new Select(booksPage.bookCategories);
         WebElement firstSelectedOption = select.getFirstSelectedOption();
     }
@@ -58,7 +59,7 @@ public class SearchBooks7_StepDefinitions {
 
             BrowserUtils.waitForVisibility(booksPage.bookCategories,10);
             select.selectByIndex(i);
-            if (i < 3) BrowserUtils.wait(4);
+            if (i < 2) BrowserUtils.wait(4);
             else BrowserUtils.wait(1);
            // System.out.println(listOfCategories.get(i)+"*********" + booksPage.getBook.getText());
             Assert.assertTrue(listOfCategories.get(i).equals(booksPage.getBook.getText() ));
