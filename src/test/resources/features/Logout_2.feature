@@ -1,4 +1,4 @@
-@vita
+@smoke
 Feature: user should logout
   Background:
     Given User is on login page
