@@ -1,14 +1,14 @@
 
 Feature: As a user, I should be able to login to the library app.
 
-  @Librarian @smoke
+  @Librarian @Regression
   Scenario: Login as a librarian
     Given I am on the login page
     When I login using "librarian17@library" and "tXqOoIOS"
     Then dashboard should be displayed "dashboard"
 
 
-  @Student @smoke
+  @Student @Regression
   Scenario Outline: Login as a student
     Given I am on the login page
     When I login using "<username>" and "<password>"

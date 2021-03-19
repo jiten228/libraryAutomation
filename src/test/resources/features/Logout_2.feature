@@ -4,14 +4,14 @@ Feature: user should logout
     Given User is on login page
 
 
-  @smoke
+  @Regression
   @Scenario
   Scenario: User should logout from library page
     When I login using "librarian17@library" and "tXqOoIOS"
     And User click on logout button
     Then User should be on login home page
 
-  @smoke
+  @Regression
   @ScenarioOutline
   Scenario Outline: User should logout from library page
     When I login using "<username>" and "<password>"
