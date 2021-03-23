@@ -14,9 +14,12 @@ import org.junit.runner.RunWith;
         features = "src/test/resources/features",
         glue = "com/libraryCT/step_definitions",
 
-        tags = "@Regression",
+ bookRecords5_branch
+        tags = " @regression @ruzanna"
 
-        dryRun = false
+        tags = "@Regression",
+ master
+
 )
 
 public class CukesRunner {

@@ -8,7 +8,7 @@ Feature: As a librarian, I should be able to see book records on user page
     And I click on "Books" link
     Then show records default value should be 10
 
-  @smoke @ruzanna
+  @regression @ruzanna
   Scenario Outline: Show records option
     Given I am on the login page
     When I login using "librarian17@library" and "tXqOoIOS"
