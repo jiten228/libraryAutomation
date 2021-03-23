@@ -14,7 +14,11 @@ import org.junit.runner.RunWith;
         features = "src/test/resources/features",
         glue = "com/libraryCT/step_definitions",
 
+ bookRecords5_branch
         tags = " @regression @ruzanna"
+
+        tags = "@Regression",
+ master
 
 )
 

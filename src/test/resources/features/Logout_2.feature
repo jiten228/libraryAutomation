@@ -1,18 +1,18 @@
-@vita
+
 Feature: user should logout
   Background:
     Given User is on login page
 
 
 
-  @Scenario
+  @Scenario @Regression
   Scenario: User should logout from library page
     When I login using "librarian17@library" and "tXqOoIOS"
     And User click on logout button
     Then User should be on login home page
 
 
-  @ScenarioOutline
+  @ScenarioOutline @Regression
   Scenario Outline: User should logout from library page
     When I login using "<username>" and "<password>"
     And User click on logout button
